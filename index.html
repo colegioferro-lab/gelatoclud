@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8f0">
+  <meta name="description" content="Gelato Club: helados artesanales, sabores increíbles y momentos dulces.">
+  <title>GELATO CLUB — Helados artesanales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header" id="inicio">
+    <a class="brand" href="#inicio"><span class="brand-icon">✳</span> gelato<span>club</span><sup>®</sup></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="nav"><a href="#sabores">Sabores</a><a href="#historia">Nuestra historia</a><a href="#visitanos">Visítanos</a></nav>
+    <button class="cart-open" id="openCart">TU PEDIDO <span id="cartCount">0</span> ♡</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-photo parallax" data-speed=".18"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span></span> HECHO CON AMOR, SERVIDO FRÍO</p>
+        <h1>UN POCO<br>DE <em>FELICIDAD</em><br>EN CADA CUCHARA.</h1>
+        <p class="hero-text">Helados artesanales, ingredientes honestos y sabores que convierten cualquier día en uno especial.</p>
+        <a class="button" href="#sabores">DESCUBRE LOS SABORES <span>↘</span></a>
+      </div>
+      <div class="hero-label">FRESCO · ARTESANAL · DELICIOSO</div>
+      <div class="hero-bottom"><span>GELATO CLUB / 2026</span><span>UN MOMENTO MÁS DULCE ↓</span></div>
+      <div class="sun-sticker">STAY<br><i>sweet</i> ✳</div>
+    </section>
+
+    <div class="marquee"><div class="marquee-track">SCOOP SOME JOY ✳ HECHO ARTESANALMENTE ✳ MÁS SABOR, MÁS SONRISAS ✳ SCOOP SOME JOY ✳ HECHO ARTESANALMENTE ✳ MÁS SABOR, MÁS SONRISAS ✳</div></div>
+
+    <section class="flavors section" id="sabores">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow dark"><span></span> LA VITRINA MÁS FELIZ</p><h2>¿QUÉ SE TE<br><em>ANTOJA HOY?</em></h2></div>
+        <p class="intro">Desde los clásicos que abrazan el alma hasta combinaciones que te sorprenderán. Tu próximo favorito está aquí.</p>
+      </div>
+      <div class="shop-tools">
+        <div class="filters">
+          <button class="filter active" data-filter="Todos">Todos <sup>08</sup></button>
+          <button class="filter" data-filter="Cremosos">Cremosos</button>
+          <button class="filter" data-filter="Frutales">Frutales</button>
+          <button class="filter" data-filter="Especiales">Especiales</button>
+        </div>
+        <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar un sabor..." aria-label="Buscar sabor"></label>
+      </div>
+      <div class="flavor-grid" id="flavorGrid"></div>
+      <p class="empty" id="emptyMessage" hidden>No encontramos ese sabor. ¡Prueba con otro!</p>
+    </section>
+
+    <section class="story" id="historia">
+      <div class="story-photo parallax" data-speed=".12" role="img" aria-label="Helado artesanal servido en un cono"></div>
+      <div class="story-content reveal">
+        <p class="eyebrow"><span></span> PEQUEÑOS LOTES, GRANDES SONRISAS</p>
+        <h2>LA VIDA ES<br>MEJOR CON<br><em>UNA CUCHARA.</em></h2>
+        <p>Creemos en los ingredientes de verdad, las recetas cuidadas y esos pequeños momentos que merecen algo delicioso. Cada bola se prepara para que saborees la diferencia.</p>
+        <a class="text-link" href="#visitanos">CONOCE NUESTRO MUNDO <span>↗</span></a>
+      </div>
+      <span class="story-stamp">HECHO<br>FRESCO<br>CADA DÍA ✳</span>
+    </section>
+
+    <section class="promise">
+      <article class="promise-card reveal"><span>01 /</span><div><b>INGREDIENTES REALES</b><p>Sabores inspirados en lo natural.</p></div><i>✳</i></article>
+      <article class="promise-card reveal"><span>02 /</span><div><b>HECHO ARTESANALMENTE</b><p>Preparado en pequeños lotes.</p></div><i>♡</i></article>
+      <article class="promise-card reveal"><span>03 /</span><div><b>MUCHAS FORMAS DE DISFRUTAR</b><p>En cono, en vaso o para compartir.</p></div><i>☼</i></article>
+    </section>
+  </main>
+
+  <footer id="visitanos">
+    <div class="footer-main"><a class="brand" href="#inicio"><span class="brand-icon">✳</span> gelato<span>club</span><sup>®</sup></a><p>HAZ ESPACIO<br>PARA ALGO <em>DULCE.</em></p><a class="footer-contact" href="mailto:hola@gelatoclub.example">HABLEMOS ↗</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> GELATO CLUB</span><span>UN POQUITO DE FELICIDAD.</span><a href="#inicio">VOLVER ARRIBA ↑</a></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-label="Tu pedido" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow dark">ALGO DELICIOSO VIENE EN CAMINO</p><h2>TU PEDIDO<span>♡</span></h2></div><button id="closeCart" aria-label="Cerrar pedido">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total"><p>SUBTOTAL <strong id="cartTotal">$0</strong></p><button class="button checkout" id="checkout">CONFIRMAR PEDIDO <span>↗</span></button><small>Demo de muestra: no se realizan cobros ni pedidos reales.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
